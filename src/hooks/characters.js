@@ -1,17 +1,17 @@
 import { useState, useEffect } from 'react';
 import { getAllCharacters, getDetails } from '../services/rickAndMortyApi';
 
-export const useCharacters = () => {
+export const useCharacters = (count) => {
   const [loading, setLoading] = useState(true); //initialize loading to true
   const [quotes, setQuotes] = useState([]); //initialize quotes to empty string
 
   useEffect(() => {
-    getAllCharacters()
+    getAllCharacters(count)
       .then((quotes) => {
         setQuotes(quotes.results);
         setLoading(false);
       });
-  }, []);
+  }, [count]);
 
   return {
     loading,

@@ -1,14 +1,27 @@
-import React from 'react';
-import CharacterCard from '../../components/characterCard/CharacterCard';
-import styles from './AllCharacters.css';
+import React, { useState } from 'react';
 import { useCharacters } from '../../hooks/characters';
+import CharacterCard from '../../components/characterCard/CharacterCard';
+import Paging from '../../components/paging/Paging';
+import styles from './AllCharacters.css';
+
 
 function AllCharacters() {
-  const { loading, quotes } = useCharacters();
+  const [count, setCount] = useState(1);
+  const decrement = () => {
+    setCount(prevCount => (prevCount > 1) ? prevCount - 1 : prevCount);
+  };  
+  const increment = () => setCount(prevCount => prevCount + 1);
+
+  const { loading, quotes } = useCharacters(count);
 
   if(loading) return <h1> Still loading the universe</h1>;
   return (
     <>
+      <Paging 
+        count={count}
+        increment={increment}
+        decrement={decrement}
+      />
       <div className={styles.AllCharacters}>
         {quotes.map(quote => 
           <CharacterCard
