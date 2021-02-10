@@ -1,17 +1,12 @@
-import React, { useState } from 'react';
-import { useCharacters } from '../../hooks/characters';
+import React from 'react';
+import { useCharacters, useCounter } from '../../hooks/characters';
 import CharacterCard from '../../components/characterCard/CharacterCard';
 import Paging from '../../components/paging/Paging';
 import styles from './AllCharacters.css';
 
 
 function AllCharacters() {
-  const [count, setCount] = useState(1);
-  const decrement = () => {
-    setCount(prevCount => (prevCount > 1) ? prevCount - 1 : prevCount);
-  };  
-  const increment = () => setCount(prevCount => prevCount + 1);
-
+  const { count, decrement, increment } = useCounter();
   const { loading, quotes } = useCharacters(count);
 
   if(loading) return <h1> Still loading the universe</h1>;

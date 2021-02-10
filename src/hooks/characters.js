@@ -35,5 +35,18 @@ export const useDetails = (id) => {
     loading,
     info
   };
+};
 
+export const useCounter = () => {
+  const [count, setCount] = useState(1);
+  const decrement = () => {
+    setCount(prevCount => (prevCount > 1) ? prevCount - 1 : prevCount);
+  };  
+  const increment = () => setCount(prevCount => prevCount + 1);
+
+  return {
+    count,
+    decrement,
+    increment
+  };
 };
