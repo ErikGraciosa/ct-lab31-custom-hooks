@@ -2,8 +2,23 @@
 
 exports[`App component renders App 1`] = `
 <DocumentFragment>
-  <h1>
-    Hello World
-  </h1>
+  <div>
+    <div>
+      <p>
+        Welcome to Dimension C-132
+      </p>
+      <a
+        class="nav-link-button"
+        href="/"
+      >
+        | Home |
+      </a>
+    </div>
+    <div>
+      <h1>
+        Placeholder for allCharacters
+      </h1>
+    </div>
+  </div>
 </DocumentFragment>
 `;
