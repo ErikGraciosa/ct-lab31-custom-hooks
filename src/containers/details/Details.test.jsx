@@ -4,12 +4,10 @@ import Details from './Details';
 
 describe('One character details container', () => {
   it('fetches and displays the details for one character', () => {
-    render(<Details />);
-
+    render(<Details match={{ params: { id: '1' } }}/>);
+    
     return waitFor(() => {
       screen.getByText('Rick Sanchez');
-      screen.getByText('Alive');
-      screen.getByText('Human');
     });
   });
 });

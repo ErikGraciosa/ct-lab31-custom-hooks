@@ -13,12 +13,13 @@ exports[`App component renders App 1`] = `
       >
         | Home |
       </a>
+      <p>
+        -----------------------------------------------------
+      </p>
     </div>
-    <div>
-      <h1>
-        Placeholder for allCharacters
-      </h1>
-    </div>
+    <h1>
+       Still loading the universe
+    </h1>
   </div>
 </DocumentFragment>
 `;
