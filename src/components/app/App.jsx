@@ -20,7 +20,7 @@ export default function App() {
             component={AllCharacters} 
           />
           <Route 
-            path="/:id" 
+            path="/characters/:id" 
             exact
             component={Details} 
           />
