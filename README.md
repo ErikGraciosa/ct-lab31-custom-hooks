@@ -17,7 +17,7 @@ Test state changes
 Mock services
 
 ## Rubric
-[]Custom hooks 5 pts
-[]behavior tests 4 pts
+[x]Custom hooks 5 pts
+[x]behavior tests 4 pts
 [x]Header 1 pt
 []paging 2 extra pts
