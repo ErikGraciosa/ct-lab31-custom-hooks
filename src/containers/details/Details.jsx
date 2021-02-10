@@ -1,9 +1,10 @@
 import React from 'react';
+import DetailsCard from '../../components/detailsCard/DetailsCard';
 
 function Details() {
   return (
     <div>
-      <h1>Placeholder for Details</h1>
+      <DetailsCard />
     </div>
   );
 }
