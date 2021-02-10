@@ -6,6 +6,7 @@ const Header = () => {
     <div>
       <p>Welcome to Dimension C-132</p>
       <Link className="nav-link-button" to="/">| Home |</Link>
+      <p>-----------------------------------------------------</p>
     </div>
   );
 };
