@@ -2,7 +2,9 @@
 
 exports[`DetailsCard component renders DetailsCard 1`] = `
 <DocumentFragment>
-  <div>
+  <div
+    class="light"
+  >
     <p />
     <img />
     <p>

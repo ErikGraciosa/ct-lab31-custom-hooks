@@ -3,6 +3,7 @@
 exports[`CharacterCard component renders CharacterCard 1`] = `
 <DocumentFragment>
   <a
+    class="light"
     href="characters/undefined"
   >
     <p />

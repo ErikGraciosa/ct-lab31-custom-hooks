@@ -14,7 +14,7 @@ export const ThemeProvider = ({ children }) => {
 };
 
 ThemeProvider.propTypes = {
-  children: PropTypes.array
+  children: PropTypes.any
 };
 
 export const useTheme = () => {

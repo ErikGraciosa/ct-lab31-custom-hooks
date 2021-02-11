@@ -3,7 +3,9 @@
 exports[`App component renders App 1`] = `
 <DocumentFragment>
   <div>
-    <div>
+    <div
+      class="light"
+    >
       <p>
         Welcome to Dimension C-132
       </p>
@@ -13,6 +15,9 @@ exports[`App component renders App 1`] = `
       >
         | Home |
       </a>
+      <button>
+        Toggle Dark Mode
+      </button>
       <p>
         -----------------------------------------------------
       </p>
