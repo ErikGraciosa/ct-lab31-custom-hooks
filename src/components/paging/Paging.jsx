@@ -5,13 +5,12 @@ import { useTheme } from '../../hooks/toggleThemeContext';
 
 const Paging = ({ increment, decrement, count }) => {
   const { theme } = useTheme(); //this needs to be what toggles
-  console.log(theme);
+  
   return (
-    <div>
+    <div className={`${styles[theme]}`}>
       <button onClick={decrement}>-1</button>
       <span>--{count}--</span>
       <button onClick={increment}>+1</button>
-      <div className={`${styles.Paging} ${styles[theme]}`}>Theme Color</div>
     </div>
   );
 };

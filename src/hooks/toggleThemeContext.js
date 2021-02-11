@@ -1,4 +1,5 @@
 import React, { createContext, useState, useContext } from 'react'; 
+import PropTypes from 'prop-types';
 
 const ThemeContext = createContext(null);
 
@@ -10,6 +11,10 @@ export const ThemeProvider = ({ children }) => {
       {children}
     </ThemeContext.Provider>
   );
+};
+
+ThemeProvider.propTypes = {
+  children: PropTypes.array
 };
 
 export const useTheme = () => {
