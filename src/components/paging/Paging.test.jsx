@@ -1,16 +1,16 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import CharacterCard from './CharacterCard';
+import Paging from './Paging';
 import { ThemeProvider } from '../../hooks/toggleThemeContext';
 import { MemoryRouter } from 'react-router-dom';
 
-describe('CharacterCard component', () => {
+describe('Paging component', () => {
   afterEach(() => cleanup());
-  it('renders CharacterCard', () => {
+  it('renders Paging', () => {
     const { asFragment } = render(
       <ThemeProvider>
         <MemoryRouter>
-          <CharacterCard />
+          <Paging />
         </MemoryRouter>     
       </ThemeProvider>
     );

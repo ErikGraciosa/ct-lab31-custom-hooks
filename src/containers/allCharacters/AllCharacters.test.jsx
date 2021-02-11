@@ -5,6 +5,8 @@ import { rest } from 'msw';
 import { setupServer } from 'msw/node';
 import AllCharacters from './AllCharacters';
 import mockApiData from '../../fixtures/mockApiData.json';
+import { ThemeProvider } from '../../hooks/toggleThemeContext';
+import { MemoryRouter } from 'react-router-dom';
 
 const server = setupServer(
   rest.get('https://rickandmortyapi.com/api/character', (req, res, ctx) => {
@@ -18,7 +20,13 @@ describe('AllCharacters container', () => {
 
   it('fetches and displays all characters to home page', () => {
     act(() => {
-      render(<AllCharacters />);
+      render(
+        <ThemeProvider>
+          <MemoryRouter>
+            <AllCharacters />
+          </MemoryRouter>     
+        </ThemeProvider>
+      );
     });
 
     return waitFor(() => {

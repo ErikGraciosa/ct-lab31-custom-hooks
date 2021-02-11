@@ -1,9 +1,14 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { useTheme } from '../../hooks/toggleThemeContext';
+import styles from './DetailsCard.css';
+
 
 function DetailsCard({ name, image, species, status }) {
+  const { theme } = useTheme();
+
   return (
-    <div>
+    <div className={`${styles[theme]}`}>
       <p>{name}</p>
       <img src={image} />
       <p>Species: {species}</p>

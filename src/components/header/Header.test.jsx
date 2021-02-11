@@ -1,16 +1,16 @@
 import React from 'react';
 import { render, cleanup } from '@testing-library/react';
-import CharacterCard from './CharacterCard';
+import Header from './Header';
 import { ThemeProvider } from '../../hooks/toggleThemeContext';
 import { MemoryRouter } from 'react-router-dom';
 
-describe('CharacterCard component', () => {
+describe('Header component', () => {
   afterEach(() => cleanup());
-  it('renders CharacterCard', () => {
+  it('renders Header', () => {
     const { asFragment } = render(
       <ThemeProvider>
         <MemoryRouter>
-          <CharacterCard />
+          <Header />
         </MemoryRouter>     
       </ThemeProvider>
     );
