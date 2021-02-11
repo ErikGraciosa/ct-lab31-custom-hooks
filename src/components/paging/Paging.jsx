@@ -4,7 +4,7 @@ import styles from './Paging.css';
 import { useTheme } from '../../hooks/toggleThemeContext';
 
 const Paging = ({ increment, decrement, count }) => {
-  const theme = useTheme(); //this needs to be what toggles
+  const { theme } = useTheme(); //this needs to be what toggles
   console.log(theme);
   return (
     <div>
